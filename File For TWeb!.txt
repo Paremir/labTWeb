@@ -1,3 +1,2 @@
 Hello!
-
 Scrinic Oleg CR-193 on branch lab1 !
