@@ -33,5 +33,4 @@ class Cart {
   this.Img = img;
   this.ButtonName = buttonName;
   }
-
 }
