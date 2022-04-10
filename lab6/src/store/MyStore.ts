@@ -22,7 +22,7 @@ export class MyStore {
       this.users = JSON.parse(temp);
     }
     else{
-      alert('Local Storage is empty');
+      alert('LS пустой');
     }
   }
 
@@ -41,5 +41,19 @@ export class MyStore {
     let index = this.users.findIndex(b => b.name == user.name);
     this.users[index] = user;
   }
-
+  checkUserInLS(user:UserDate){
+    let temp = localStorage.getItem('Users');
+    if (temp){
+      let users:UserDate[] = JSON.parse(temp);
+      if (users.some(b=> b.name == user.name && b.password == user.password)){
+        alert('Такой пользователь есть!')
+      }
+      else {
+        alert('Такого пользователя нет')
+      }
+    }
+    else{
+      alert('LS пустой');
+    }
+  }
 }

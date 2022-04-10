@@ -1,7 +1,7 @@
 <div *ngIf="store.users && store.users.length > 0; else loadBlock">
   <div *ngFor ="let user of store.users; let i = index">
     <br/>
-    {{i+1}}. Name - {{user.name}} | Password - {{user.password}}
+    {{i+1}}. Имя - {{user.name}} | Пароль - {{user.password}}
   </div>
 </div>
 
@@ -20,6 +20,9 @@
 <br/>
 <br/>
 <button (click)="getUsers()">Загрузить юзеров из LS</button>
+<br/>
+<br/>
+<button (click)="checkUser()">Проверить есть ли этот Name\Password в LS</button>
 
 <ng-template #loadBlock>Загрузка...</ng-template>
 

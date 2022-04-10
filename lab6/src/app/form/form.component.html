@@ -1,0 +1,30 @@
+<div style="margin: 2% 40%;">
+  <mat-form-field appearance="outline">
+    <mat-label>Input</mat-label>
+    <input matInput [(ngModel)]="input" >
+  </mat-form-field>
+  <br/>
+  INPUT: {{input}}
+  <br/>
+  <br/>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select [(ngModel)]="selectedValue">
+      <mat-option value="First option">First option</mat-option>
+      <mat-option value="Second option">Second option</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+  Select: {{selectedValue}}
+  <br/>
+  <br/>
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput [(ngModel)]="textarea"></textarea>
+  </mat-form-field>
+  <br/>
+  Textarea: {{textarea}}
+  <br/>
+  <br/>
+</div>

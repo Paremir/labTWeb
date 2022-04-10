@@ -1,0 +1,27 @@
+
+
+<mat-tab-group >
+  <mat-tab *ngFor="let item of ArrayMenu">
+    <ng-template mat-tab-label>
+      {{item.Menu}}
+    </ng-template>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title> {{item.Name}} </mat-card-title>
+        <mat-card-subtitle> {{item.Description}}</mat-card-subtitle>
+
+      </mat-card-header>
+      <img mat-card-image [src]= item.Img>
+      <mat-card-content>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="like(item.ButtonName)" mat-button  >LIKE</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-tab>
+
+
+</mat-tab-group>
